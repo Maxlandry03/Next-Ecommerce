@@ -75,4 +75,8 @@ const Add = ({
   );
 };
 
+<<<<<<< HEAD
 export default Add;
+=======
+export default Add;
+>>>>>>> 577e1380f2fb0b80ea9be648b8966831e7fc98fa
