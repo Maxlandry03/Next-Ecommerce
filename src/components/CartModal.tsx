@@ -77,7 +77,7 @@ const CartModal = () => {
             <div className="">
                 <div className="flex items-center justify-between font-semibold">
                     <span className="">Subtotal</span>
-                    <span className="">${cart.subtotal.amount}</span>
+                    <span className="">${cart.lineItems?.reduce((acc, item) => acc + (typeof item.price?.amount === 'string' ? parseFloat(item.price.amount) : item.price?.amount || 0), 0).toFixed(2)}</span>
                 </div>
                 <p className="text-gray-500 text-sm mt-2 mb-4">Shipping and taxes calculated at checkout</p>
                 <div className="flex justify-between text-sm">
